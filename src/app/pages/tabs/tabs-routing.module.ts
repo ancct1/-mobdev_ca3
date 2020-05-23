@@ -57,6 +57,15 @@ const routes: Routes = [
                         loadChildren: () => import('../deaths-details/deaths-details.module').then(m => m.DeathsDetailsPageModule)
                     }
                 ]
+            },
+            {
+                path: 'camera',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: () => import('../camera/camera.module').then(m => m.CameraPageModule)
+                    },
+                ]
             }
         ]
     },
